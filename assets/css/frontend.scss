@@ -1,0 +1,128 @@
+.rep-section {
+  max-width: 100% !important;
+  .rep-chart-wrap {
+    display: grid;
+    grid-template-columns: 65% 33%;
+    gap: 2%;
+  }
+  #regions_map_tooltip {
+    position: absolute;
+    pointer-events: none;
+    transition: left 300ms ease-out, top 300ms ease-out;
+    padding: 5px;
+    width: 150px;
+    background: white;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 14px;
+    .state {
+      font-weight: 700;
+    }
+    &.hidden {
+      opacity: 0;
+    }
+  }
+
+  .rep-regions-lists {
+    background-color: #fbfaf5;
+    padding: 30px;
+    position: relative;
+    #rep-regions-heading {
+      margin-bottom: 30px;
+    }
+    .rep-sales-rep-content {
+      max-height: 300px;
+      overflow-x: hidden;
+      padding-right: 10px;
+      &::-webkit-scrollbar {
+        width: 6px;
+      }
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+      }
+      .rep-sales-rep-content-wrapper {
+        p {
+          margin: 0;
+        }
+      }
+      .rep-data {
+        display: none;
+        align-items: center;
+        gap: 20px;
+        border-bottom: 3px double #efead3;
+        padding: 15px 0;
+        &.visible {
+          display: block;
+          &:nth-last-child(1 of .visible) {
+            border-bottom: 0;
+          }
+        }
+      }
+      .profile-picture {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+      }
+      .rep-content {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .title {
+          font-weight: 700;
+        }
+        .company-and-agency-name {
+          font-size: 13px;
+          color: gray;
+        }
+        .rep-contact-details {
+          display: flex;
+          flex-direction: column;
+          font-size: 13px;
+          gap: 20px;
+          flex-wrap: wrap;
+          row-gap: 5px;
+          a {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+          }
+        }
+        .mail-icon {
+          display: block;
+          height: 20px;
+        }
+        .call-icon {
+          display: block;
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .rep-section {
+    .rep-chart-wrap {
+      grid-template-columns: 58% 40%;
+    }
+    .rep-regions-lists {
+      padding: 15px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .rep-section {
+    .rep-chart-wrap {
+      grid-template-columns: 1fr;
+    }
+    .rep-regions-lists {
+      padding: 10px;
+    }
+  }
+}

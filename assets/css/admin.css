@@ -1,0 +1,78 @@
+#representative-meta-box .inside {
+  padding: 0;
+}
+
+.representative_meta_box .field_wrapper {
+  border-bottom: 1px solid #ddd;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.representative_meta_box .field_wrapper:last-child {
+  border-bottom: none;
+}
+.representative_meta_box .field_wrapper :last-child {
+  border-bottom: none;
+}
+.representative_meta_box .field_wrapper > div {
+  margin: 5px;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+.representative_meta_box .field_wrapper #profile_picture_image {
+  width: auto;
+  height: auto;
+  width: 200px;
+  height: 200px;
+}
+.representative_meta_box .field_wrapper label {
+  font-weight: bold;
+  padding-left: 5px;
+}
+.representative_meta_box .field_wrapper input {
+  width: 100%;
+}
+.representative_meta_box .field_wrapper div.image_box {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.representative_meta_box .field_wrapper div.image_box .profile_image img {
+  display: block;
+  min-width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+.representative_meta_box .field_wrapper div.image_box a.set_profile_picture,
+.representative_meta_box .field_wrapper div.image_box a.remove_profile_picture {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #000;
+  top: 0px;
+  right: 0px;
+}
+.representative_meta_box .field_wrapper div.image_box a.set_profile_picture img,
+.representative_meta_box .field_wrapper div.image_box a.remove_profile_picture img {
+  width: 15px;
+  height: 15px;
+  filter: invert(96%) sepia(4%) saturate(0%) hue-rotate(130deg) brightness(88%) contrast(106%);
+}
+.representative_meta_box .field_wrapper div.image_box a.set_profile_picture:hover img {
+  filter: invert(46%) sepia(94%) saturate(1186%) hue-rotate(157deg) brightness(101%) contrast(102%);
+}
+.representative_meta_box .field_wrapper div.image_box a.remove_profile_picture:hover img {
+  filter: invert(35%) sepia(21%) saturate(4937%) hue-rotate(350deg) brightness(94%) contrast(87%);
+}
+.representative_meta_box .hidden {
+  display: none !important;
+}
