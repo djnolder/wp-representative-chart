@@ -68,9 +68,13 @@ document.addEventListener("DOMContentLoaded", function () {
             element.classList.remove("visible")
           }
         })
-
-        document.getElementById("rep-regions-heading").innerHTML =
-          "There are " + count + " reps in <b>" + region + "</b>."
+        if (count == 1) {
+          document.getElementById("rep-regions-heading").innerHTML =
+            "There is " + count + " rep in <b>" + region + "</b>."
+        } else {
+          document.getElementById("rep-regions-heading").innerHTML =
+            "There are " + count + " reps in <b>" + region + "</b>."
+        }
       },
       false
     )
