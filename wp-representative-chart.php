@@ -4,7 +4,7 @@
  * Plugin Name: Wholesale Rep Map
  * Plugin URI: 
  * Description: A representative chart, also known as a data visualization or graph, is a visual tool used to illustrate data and information in an easily interpretable format.
- * Version: 1.0.1
+ * Version: 1.1.04
  * Requires at least: 6.3
  * Tested up to: 6.4
  * Requires PHP: 7.4
@@ -29,7 +29,7 @@
 
 namespace Rep_Chart;
 
-define('REPCHART_VERSION', '1.0.1');
+define('REPCHART_VERSION', '1.1.04');
 define('REPCHART_FILE', __FILE__);
 define('REPCHART_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('REPCHART_ABSPATH', dirname(__FILE__) . '/');

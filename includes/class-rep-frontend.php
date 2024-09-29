@@ -107,32 +107,28 @@ class Frontend
                                         <?php if (! empty($profile_picture[0])) : ?>
                                             <img class="profile-picture" src="<?= esc_url($profile_picture[0]); ?>" alt="<?= esc_attr($post_title); ?>" />
                                         <?php endif; ?>
-
                                         <div class="rep-content">
-                                            <p class="title"><?= esc_html($post_title); ?></p>
+                                            <div class="title"><?= esc_html($post_title); ?></div>
 
                                             <?php if (! empty($caa_name)) : ?>
-                                                <p class="company-and-agency-name"><?= wp_kses_post($caa_name); ?></p>
+                                                <div class="company-and-agency-name"><?= wp_kses_post($caa_name); ?></div>
                                             <?php endif; ?>
-
-                                            <?php if (! empty($email_address) || ! empty($phone_number)) : ?>
-                                                <div class="rep-contact-details">
-                                                    <?php if (! empty($email_address)) : ?>
-                                                        <p>
-                                                            <a href="mailto:<?= esc_attr($email_address); ?>">
-                                                                <img class="mail-icon" src="<?= REPCHART_PLUGIN_URL ?>assets/icons/email.svg" />
-                                                                <?= wp_kses_post($email_address); ?>
-                                                            </a>
-                                                        </p>
-                                                    <?php endif; ?>
-                                                    <?php if (! empty($phone_number)) : ?>
-                                                        <p>
-                                                            <a href="tel:<?= $this->format_phone($phone_number, true); ?>">
-                                                                <img class="call-icon" src="<?= REPCHART_PLUGIN_URL ?>assets/icons/phone.svg" />
-                                                                <?= $this->format_phone($phone_number); ?>
-                                                            </a>
-                                                        </p>
-                                                    <?php endif; ?>
+                                        </div>
+                                        <div class="rep-contact">
+                                            <?php if (! empty($email_address)) : ?>
+                                                <div class="email_address">
+                                                    <a href="mailto:<?= esc_attr($email_address); ?>">
+                                                        <img class="mail-icon" src="<?= REPCHART_PLUGIN_URL ?>assets/icons/email.svg" />
+                                                        <?= wp_kses_post($email_address); ?>
+                                                    </a>
+                                                </div>
+                                            <?php endif; ?>
+                                            <?php if (! empty($phone_number)) : ?>
+                                                <div class="phone_number">
+                                                    <a href="tel:<?= $this->format_phone($phone_number, true); ?>">
+                                                        <img class="call-icon" src="<?= REPCHART_PLUGIN_URL ?>assets/icons/phone.svg" />
+                                                        <?= $this->format_phone($phone_number); ?>
+                                                    </a>
                                                 </div>
                                             <?php endif; ?>
                                         </div>
